@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+#loader{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #130b32;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 0.7s, visibility 0.7s;
+}
+.fine{
+  width: 80px;
+  height: 20px;
+  border-radius: 30px 30px 0 0;
+  background: #fff;
+  margin-top: 10px;
+  z-index: 99;
+}
+.contain{
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  margin-top: 7px;
+  padding: 10px;
+  z-index: 99;
+}
+.charge-content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: #130b32;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 99;
+}
+.charge{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(228, 18, 18);
+  width: 100%;
+  height: 10px;
+  animation: charge 5s linear infinite;
+  transition: .5s;
+  z-index: 99;
+}
+.shadow-one{
+  position: absolute;
+  width: 10px;
+  height: 50px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: 20px;
+  left: 5px;
+  z-index: 100;
+}
+
+
+@keyframes charge{
+  20%{
+    height: 20px;
+  }
+  30%{
+    height: 30px;
+  }
+  40%{
+    height: 50px;
+  }
+  60%{
+    height: 100px;
+    background: yellow;
+  }
+  70%{
+    height: 120px;
+    background: yellow;
+  }
+  80%{
+    height: 160px;
+    background: green;
+  }
+  90%{
+    height: 220px;
+    background: green;
+  }
+  95%{
+    height: 350px;
+    background: green;
+  }
+  100%{
+    height: 10px;
+    background: green;
+  }
+}
+
+.fadeLoad{
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+/* ------------------------------------------------- */
+.contenido{
+  background: #252525;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+  transition: 1s;
+}
